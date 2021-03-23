@@ -1,29 +1,19 @@
 ﻿using DJI.WindowsSDK;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Threading;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 using DJIVideoParser;
 using DJI.WindowsSDK.Components;
+using System;
 
 namespace DJIDrone.VideoDrone
 {
     public sealed partial class PageVideo : Page
     {
         private Parser videoParser;
-
+        private FlightControllerHandler flightControllerHandler;
+        private RemoteControllerHandler remote;
+        private CommandesPilotage commandes = new CommandesPilotage();
         public PageVideo()
         {
             this.InitializeComponent();
@@ -39,7 +29,7 @@ namespace DJIDrone.VideoDrone
         protected override void OnNavigatedFrom(NavigationEventArgs e)
         {
             base.OnNavigatedTo(e);
-            UninitializeVideoFeedModule();
+            //UninitializeVideoFeedModule();
         }
 
         /// <summary>
@@ -47,6 +37,7 @@ namespace DJIDrone.VideoDrone
         /// </summary>
         private async void InitializeVideoFeedModule()
         {
+
             await Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, async () =>
             {
                 if (videoParser == null)
@@ -115,9 +106,9 @@ namespace DJIDrone.VideoDrone
             }
         }
 
-        private void Page_Loaded(object sender, RoutedEventArgs e)
+        private async void Page_Loaded(object sender, RoutedEventArgs e)
         {
-            Commandes commandes = new Commandes();
+            //lblAltitude1.Text = "Altitude : " + flightControllerHandler.GetAltitudeAsync().ToString() + "m";
             commandes.Avancer();
         }
     }
