@@ -19,6 +19,7 @@ namespace DJIDrone.DJISDKInitializing
 {
     public sealed partial class ActivatingPage : Page
     {
+        bool auth;
         /// <summary>
         /// Enregistrement de l'utilisteur
         /// </summary>
@@ -34,6 +35,15 @@ namespace DJIDrone.DJISDKInitializing
             {
                 activateStateTextBlock.Text = state == SDKRegistrationState.Succeeded ? "Activé." : "Inactif.";
                 activationInformation.Text = resultCode == SDKError.NO_ERROR ? "Enregistré avec succès." : resultCode.ToString();
+            if (resultCode == SDKError.NO_ERROR)
+                {
+                    auth = true;
+                    switch (auth) 
+                    {
+                        case true:
+                            break;
+                    }
+                }
             });
         }
          
