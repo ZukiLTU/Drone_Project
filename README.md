@@ -19,7 +19,7 @@ This application is meant to be used with Mavic Air drone, there will be incompa
 
 ### List of materials needed :
 <ul>
-    <li>Visual Studio 2019 (Preview, 16.9.0)</li>
+    <li>Visual Studio 2019</li>
     <li>Mavic Air drone</li>
     <li>Extreme 3D Pro joystick</li>
 </ul>
