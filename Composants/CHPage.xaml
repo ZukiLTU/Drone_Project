@@ -1,0 +1,80 @@
+﻿<Page
+    x:Class="DJIDrone.ComponentHandling.CHPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIDrone.ComponentHandling"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid x:Name="RootGrid">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ScrollViewer Margin="8,10,0,0" Grid.Row="1">
+                <StackPanel>
+                    <StackPanel Name="eventSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}">Observation du drone :</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Si vous observez des événements dans le DJI Windows SDK, vous pouvez obtenir les données les plus récentes de l'événement alors que les données de l'événement changent. Appuyez sur le bouton ci-dessous et déplacez votre drone. La valeur de la zone de texte ci-dessous changera alors de manière dynamique.
+                        </TextBlock>
+
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <Button x:Name="btnVelocite" Command="{Binding RegisterVelocityChangedObserver}">Enregistrer la vélocité du drone</Button>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Vélocité en X :</TextBlock>
+                                <TextBlock  Text="{Binding AircraftVelocityXString}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Vélocité en Y :</TextBlock>
+                                <TextBlock Text="{Binding AircraftVelocityYString}" />
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock>Vélocité en Z :</TextBlock>
+                                <TextBlock Text="{Binding AircraftVelocityZString}" />
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" Name="settingSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}">Paramètres :</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                          Les interfaces de réglage des composants sont des interfaces attendues par lesquelles vous pouvez régler certaines valeurs de votre drone comme l'ISO de la caméra et le nom de l'avion. Saisissez un nouveau nom pour votre drone dans le bloc de texte ci-dessous et cliquez sur le bouton pour lancer le paramétrage.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox HorizontalAlignment="Left" Width="220" PlaceholderText="Nom de drone" Text="{Binding AircraftSetName ,Mode=TwoWay}"></TextBox>
+                            <Button Margin="0,5,0,0" Command="{Binding SetAircraftName}">Changer</Button>
+                        </StackPanel>
+                    </StackPanel>
+                    <StackPanel Margin="0,10,0,0" Name="gettingSamplePanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Recherche :</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Les interfaces des composants sont des interfaces attendues par lesquelles vous pourriez obtenir certaines valeurs de votre drone. Obtenez le nom de votre drone que vous venez de définir il y a une minute.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox Text="{Binding AircraftGetName}" Width="220" HorizontalAlignment="Left" PlaceholderText="Nom du drone" IsEnabled="False"></TextBox>
+                            <Button Command="{Binding GetAircraftName}" Margin="0,5,0,0">Chercher</Button>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,10,0,0" Name="actionSamplesPanel">
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Action:</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Vous pouvez également appeler certaines actions comme le décollage ou l'atterrissage. Cliquez sur le bouton ci-dessous et les moteurs de votre avion seront mis en marche.
+                        </TextBlock>
+                        <TextBlock FontWeight="Bold">
+                        *Note* NE PAS cliquer sur ce bouton lorsque le décollage est dangereux.
+                        </TextBlock>
+                        <Button x:Name="btnDecollage" Margin="0,8,0,0" Command="{Binding StartTakeoff}" Click="btnDecollage_Click">Décollage automatique</Button>
+                        <Button x:Name="btnRetour" Command="{Binding StartTakeoff}" Click="btnRetour_Click" Content="Retour automatique"/>
+                    </StackPanel>
+                </StackPanel>
+
+            </ScrollViewer>
+
+        </Grid>
+    </Grid>
+</Page>
+
