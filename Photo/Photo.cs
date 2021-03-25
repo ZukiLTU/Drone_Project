@@ -103,7 +103,7 @@ namespace DJIDrone.VideoDrone
                         {
                             if (value != null)
                             {
-                                lblMsg.Text += value.Value.value.ToString();
+                                lblMsg.Text = value.Value.value.ToString() + "s";
                             }
                         });
                     };
