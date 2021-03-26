@@ -29,3 +29,6 @@ This application is meant to be used with Mavic Air drone, there will be incompa
 `map_key :` API Key from Bing Map Developer required (https://www.bingmapsportal.com/)
 
 ## How to use
+**For video display :**
+- Connect the drone using WIFI in your computer
+- Turn on and plug the drone's controller with USB
