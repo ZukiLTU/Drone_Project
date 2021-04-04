@@ -5,12 +5,13 @@
   xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
   xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
   xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
-  IgnorableNamespaces="uap mp uap3">
+  xmlns:uap4="http://schemas.microsoft.com/appx/manifest/uap/windows10/4"
+  IgnorableNamespaces="uap mp uap3 uap4">
 
   <Identity
     Name="com.djidrone"
     Publisher="CN=Tadas"
-    Version="1.0.0.0" />
+    Version="1.2.2.0" />
 
   <mp:PhoneIdentity PhoneProductId="281aa02b-22bf-4469-9469-586606d1159a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
@@ -49,7 +50,12 @@
   <Capabilities>
     <Capability Name="internetClient" />
     <uap3:Capability Name="backgroundMediaPlayback"/>
+    <uap3:Capability Name="userNotificationListener"/>
+    <Capability Name="codeGeneration"/>
+    <Capability Name="internetClientServer"/>
+    <uap4:Capability Name="offlineMapsManagement"/>
     <DeviceCapability Name="bluetooth"/>
     <DeviceCapability Name="microphone"/>
+    <DeviceCapability Name="location"/>
   </Capabilities>
 </Package>
