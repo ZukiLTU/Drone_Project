@@ -17,13 +17,13 @@ using YamlDotNet.RepresentationModel;
 
 namespace DJIDrone.DJISDKInitializing
 {
-    public sealed partial class ActivatingPage : Page
+    public sealed partial class PageActivation: Page
     {
         bool auth;
         /// <summary>
         /// Enregistrement de l'utilisteur
         /// </summary>
-        public ActivatingPage()
+        public PageActivation()
         {
             this.InitializeComponent();
             DJISDKManager.Instance.SDKRegistrationStateChanged += Instance_SDKRegistrationEvent;
