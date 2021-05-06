@@ -1,0 +1,23 @@
+﻿<Page
+    x:Class="DJIDrone.Vol.PageVol"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIDrone.Vol"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0">
+            <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}">Affichage de zones</TextBlock>
+            <TextBlock Style="{StaticResource BodyTextBlockStyle}">Cette page vous montre les zones où votre drone peut voler.</TextBlock>
+        </StackPanel>
+        <WebView HorizontalAlignment="Left" Height="913" Margin="10,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="1490"
+                 Source="https://www.geoportail.gouv.fr/embed/visu.html" Loaded="WebView_Loaded" Name="wb"/>
+    </Grid>
+</Page>
