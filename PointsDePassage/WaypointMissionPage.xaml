@@ -1,0 +1,82 @@
+﻿<Page
+    x:Class="DJIDrone.WaypointHandling.PagePoints"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:DJIDrone.WaypointHandling"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:maps="using:Windows.UI.Xaml.Controls.Maps"
+    mc:Ignorable="d" Height="1148">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackPanel>
+            <TextBlock FontSize="36" Style="{StaticResource TitleTextBlockStyle}">Points de passage</TextBlock>
+        </StackPanel>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"></ColumnDefinition>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid Width="335" Margin="0,10,0,0" ScrollViewer.VerticalScrollBarVisibility="Visible">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <StackPanel Margin="0,0,0,10">
+                    <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}" Height="38"> Etat du drone</TextBlock>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock x:Name="TBlock" Style="{StaticResource BodyTextBlockStyle}" SelectionChanged="TBlock_SelectionChanged"> Etat du simulateur:</TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding SimulatorState}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Etat des points de passage:</TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding WaypointMissionState}"></TextBlock>
+                    </StackPanel>
+                    <StackPanel Margin="0,6,0,0" Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> Attitude:</TextBlock>
+                        <TextBlock Margin="6,0,0,0" Style="{StaticResource BodyTextBlockStyle}" Text="{Binding AircraftAltitude}">0</TextBlock>
+                    </StackPanel>
+                </StackPanel>
+
+                <ScrollViewer RenderTransformOrigin="0.5,0.5" Margin="2,2,-5,694" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.Row="1">
+                    <ScrollViewer.RenderTransform>
+                        <CompositeTransform Rotation="0.363"/>
+                    </ScrollViewer.RenderTransform>
+                    <StackPanel Height="925">
+                        <Button Command="{Binding SetGroundStationModeEnabled}" IsEnabled="{Binding IsSimulatorStart}" Content="Activer le mode sol" Height="35"/>
+                        <Button Margin="0,6,0,0" Command="{Binding InitWaypointMission}" IsEnabled="{Binding IsSimulatorStart}" Content="Initialiser mission"/>
+                        <Button Margin="0,6,0,0" Command="{Binding AddAction}" IsEnabled="{Binding IsSimulatorStart}" Content="Ajouter une action &quot;arrêt&quot; à un point"/>
+                        <Button Margin="0,6,0,0" Command="{Binding LoadMission}" IsEnabled="{Binding IsSimulatorStart}" Content="Charger une mission"/>
+                        <Button Margin="0,6,0,0" Command="{Binding UploadMission}" IsEnabled="{Binding IsSimulatorStart}" Content="Télécharger la mission sur le drone"/>
+                        <Button Margin="0,6,0,0" Command="{Binding StartMission}" IsEnabled="{Binding IsSimulatorStart}" Content="Commencer la mission"/>
+
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Latitude1, Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Latitude 1" VerticalAlignment="Stretch"/>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Longitude1,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Longitude 1"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Latitude2,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Latitude 2"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Longitude2,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Longitude 2"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Latitude3,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Latitude 3"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Longitude3,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Longitude 3"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Latitude4,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Latitude 4"></TextBox>
+                        <TextBox Margin="0,3,0,0" Width="210" Text="{Binding Longitude4,Mode=TwoWay}" HorizontalAlignment="Left" PlaceholderText="Longitude "></TextBox>
+                        <TextBox TextWrapping="Wrap" PlaceholderText="Altitude"/>
+                        <Button Content="Ajouter" Click="Button_Click"/>
+                    </StackPanel>
+                </ScrollViewer>
+                <TextBlock x:Name="coords" HorizontalAlignment="Left" Height="28" Margin="5,115,0,0" Grid.RowSpan="2" Text="Coords : " TextWrapping="Wrap" VerticalAlignment="Top" Width="234"/>
+            </Grid>
+            <maps:MapControl 
+                ZoomInteractionMode="GestureAndControl"
+                TiltInteractionMode="GestureAndControl"
+                Name="WaypointMap"
+                ZoomLevel="18"
+                Grid.Column="1"
+                Margin="10,10,-2,0" Style="AerialWithRoads"/>
+        </Grid>
+    </Grid>
+</Page>
