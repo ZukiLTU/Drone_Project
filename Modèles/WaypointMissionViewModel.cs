@@ -14,6 +14,8 @@ namespace DJIDrone.ViewModels
 {
     class WaypointMissionViewModel : ViewModelBase
     {
+        List<Waypoint> ptsDePassage;
+
         private static readonly WaypointMissionViewModel _singleton = new WaypointMissionViewModel();
         public static WaypointMissionViewModel Instance
         {
@@ -69,11 +71,26 @@ namespace DJIDrone.ViewModels
                 IsSimulatorStart = value.HasValue && value.Value.value;
             });
         }
+        public String Latitude { get; set; }
+        public String Longitude { get; set; }
 
         public String SimulatorLatitude { set; get; }
         public String SimulatorLongitude { set; get; }
         public String SimulatorSatelliteCount { set; get; }
+        public String Latitude1 { set; get; }
+        public String Latitude2 { set; get; }
+        public String Latitude3 { set; get; }
+        public String Latitude4 { set; get; }
+        public String Longitude1 { set; get; }
+        public String Longitude2 { set; get; }
+        public String Longitude3 { set; get; }
+        public String Longitude4 { set; get; }
         bool _isSimulatorStart = false;
+
+        /*public void GetCoords()
+        {
+            ptsDePassage.Add();
+        }*/
         public bool IsSimulatorStart
         {
             get
@@ -107,7 +124,7 @@ namespace DJIDrone.ViewModels
                 OnPropertyChanged(nameof(WaypointMissionState));
             }
         }
-       
+
 
         private double _aircraftAltitude = 0;
         public double AircraftAltitude
@@ -135,7 +152,7 @@ namespace DJIDrone.ViewModels
                         {
                             var latitude = Convert.ToDouble(SimulatorLatitude);
                             var longitude = Convert.ToDouble(SimulatorLongitude);
-                            var satelliteCount = Convert.ToInt32(SimulatorSatelliteCount);
+                            var satelliteCount = 4;
 
                             var err = await DJISDKManager.Instance.ComponentManager.GetFlightControllerHandler(0, 0).StartSimulatorAsync(new SimulatorInitializationSettings
                             {
@@ -219,7 +236,7 @@ namespace DJIDrone.ViewModels
             };
             return waypoint;
         }
-        
+
         public ICommand _initWaypointMission;
         public ICommand InitWaypointMission
         {
@@ -251,10 +268,16 @@ namespace DJIDrone.ViewModels
                             missionID = 0,
                             waypoints = new List<Waypoint>()
                             {
+                                /*
+                                InitDumpWaypoint(Convert.ToDouble(Latitude1), Convert.ToDouble(Longitude1)),
+                                InitDumpWaypoint(Convert.ToDouble(Latitude2), Convert.ToDouble(Longitude2)),
+                                InitDumpWaypoint(Convert.ToDouble(Latitude3), Convert.ToDouble(Longitude3)),
+                                InitDumpWaypoint(Convert.ToDouble(Latitude4), Convert.ToDouble(Longitude4)),*/
                                 InitDumpWaypoint(nowLat+0.0001, nowLng+0.00015),
                                 InitDumpWaypoint(nowLat+0.0001, nowLng-0.00015),
                                 InitDumpWaypoint(nowLat-0.0001, nowLng-0.00015),
                                 InitDumpWaypoint(nowLat-0.0001, nowLng+0.00015),
+                                //InitDumpWaypoint(Convert.ToDouble(Latitude), Convert.ToDouble(Longitude))
                             }
                         };
                         WaypointMission = mission;
