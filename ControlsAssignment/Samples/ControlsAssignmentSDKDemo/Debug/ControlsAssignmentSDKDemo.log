@@ -1,0 +1,31 @@
+﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(39,5): warning MSB4211: La propriété "IntermediateOutputPath" est définie à une valeur pour la première fois, mais elle a déjà été consommée à "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets(29,5): warning MSB4211: La propriété "DebugType" est définie à une valeur pour la première fois, mais elle a déjà été consommée à "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.BuildSteps.Targets (28,5)".
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Current\Bin\Microsoft.Common.CurrentVersion.targets(370,5): warning MSB4211: La propriété "CleanFile" est définie à une valeur pour la première fois, mais elle a déjà été consommée à "C:\Program Files (x86)\Microsoft Visual Studio\2019\Preview\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets (38,5)".
+cl : ligne de commande warning D9035: l'option 'Gm' est déconseillée et sera supprimée dans une version ultérieure
+  stdafx.cpp
+cl : ligne de commande warning D9035: l'option 'Gm' est déconseillée et sera supprimée dans une version ultérieure
+  ControlsAssignmentSDKDemoDlg.cpp
+  ControlsAssignmentSDKDemo.cpp
+  ControlDataFile.cpp
+  LogiPovDirection.cpp
+  LogiGameAction.cpp
+  LogiControlsAssignmentUtils.cpp
+  LogiControlsAssignment.cpp
+  LogiControllerXInput.cpp
+  LogiControllerDInput.cpp
+  LogiController.cpp
+  LogiControl.cpp
+  LogiButton.cpp
+  LogiAxis.cpp
+  LogiGameControllerXInput.cpp
+  LogiGameControllerDI.cpp
+  LogiGameController.cpp
+  LogiControllerInputUtils.cpp
+  LogiControllerInput.cpp
+F:\Cours\SN2\Projeeeeeet\Drone\dlls\Joystick\ControllerInput\Src\LogiControllerInput.cpp(1424,5): warning C5205: la suppression d'une classe abstraite 'LogitechControllerInput::LogiGameController' qui a un destructeur non virtuel entraîne un comportement indéfini
+F:\Cours\SN2\Projeeeeeet\Drone\dlls\Joystick\ControllerInput\Src\LogiGameController.h(18): message : voir la déclaration de 'LogitechControllerInput::LogiGameController'
+F:\Cours\SN2\Projeeeeeet\Drone\dlls\Joystick\ControllerInput\Src\LogiControllerInput.cpp(1477,13): warning C4995: 'XInputEnable' : le nom a été marqué comme #pragma deprecated
+F:\Cours\SN2\Projeeeeeet\Drone\dlls\Joystick\ControllerInput\Src\LogiControllerInput.cpp(1483,13): warning C4995: 'XInputEnable' : le nom a été marqué comme #pragma deprecated
+  Génération de code en cours...
+LogiControllerInput.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/SAFESEH'
+  ControlsAssignmentSDKDemo.vcxproj -> F:\Cours\SN2\Projeeeeeet\Drone\DJIDrone\Debug\ControlsAssignmentSDKDemo.exe
