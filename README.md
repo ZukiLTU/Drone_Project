@@ -8,4 +8,3 @@ Class project (2021)
 
 # Configuration (config.yml)
 `api_key :` API Key from DJI Developer (https://developer.dji.com/)<br/>
-`map_key :` API Key from Bing Map Developer required (https://www.bingmapsportal.com/)
