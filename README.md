@@ -26,7 +26,6 @@ This application is meant to be used with Mavic Air drone, there will be incompa
 
 ## Configuration (config.yml)
 `api_key :` API Key from DJI Developer (https://developer.dji.com/)<br/>
-`map_key :` API Key from Bing Map Developer required (https://www.bingmapsportal.com/)
 
 ## How to use
 **For video display :**
