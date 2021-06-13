@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="ControlsAssignmentSDKFiles">
+      <UniqueIdentifier>{0cce1648-39bc-4094-9abd-321ca8b3a6d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ControllerInputSDKFiles">
+      <UniqueIdentifier>{aab7cf50-c96f-461e-b4bc-8186d16805cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Misc">
+      <UniqueIdentifier>{70be66f0-9e49-4a0f-83d5-4ebdab5083d8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ControlDataFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlsAssignmentSDKDemo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ControlsAssignmentSDKDemoDlg.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiAxis.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiButton.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiControl.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiController.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiControllerDInput.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiControllerXInput.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiControlsAssignment.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiControlsAssignmentUtils.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiGameAction.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Src\LogiPovDirection.cpp">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControllerInput\Src\LogiControllerInput.cpp">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControllerInput\Src\LogiControllerInputUtils.cpp">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControllerInput\Src\LogiGameController.cpp">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControllerInput\Src\LogiGameControllerDI.cpp">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\ControllerInput\Src\LogiGameControllerXInput.cpp">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Actions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlDataFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlsAssignmentSDKDemo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ControlsAssignmentSDKDemoDlg.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiAxis.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiButton.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControl.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiController.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControllerDInput.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControllerXInput.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControlsAssignment.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControlsAssignmentGlobals.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiControlsAssignmentUtils.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiGameAction.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Src\LogiPovDirection.h">
+      <Filter>ControlsAssignmentSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiControllerInput.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiControllerInputGlobals.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiControllerInputUtils.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiGameController.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiGameControllerDI.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\ControllerInput\Src\LogiGameControllerXInput.h">
+      <Filter>ControllerInputSDKFiles</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\ControlsAssignmentSDKDemo.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ControlsAssignmentSDKDemo.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\ControlsAssignmentSDKDemo.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>
