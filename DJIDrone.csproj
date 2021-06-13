@@ -225,6 +225,8 @@
     <Content Include="avfilter-7.dll" />
     <Content Include="avformat-58.dll" />
     <Content Include="avutil-56.dll" />
+    <Content Include="LogitechSteeringWheel.dll" />
+    <Content Include="lwcomctl.dll" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -284,13 +286,13 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>6.2.12</Version>
+      <Version>6.2.11</Version>
     </PackageReference>
     <PackageReference Include="MonoGame.Framework.WindowsUniversal">
       <Version>3.8.0.1641</Version>
     </PackageReference>
     <PackageReference Include="YamlDotNet">
-      <Version>11.1.1</Version>
+      <Version>9.1.4</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -331,6 +333,7 @@
   <ItemGroup>
     <None Include="config.yml" />
     <None Include="DJIDrone_TemporaryKey.pfx" />
+    <None Include="errors.yml" />
     <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
