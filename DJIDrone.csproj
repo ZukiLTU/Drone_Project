@@ -289,7 +289,7 @@
       <Version>6.2.11</Version>
     </PackageReference>
     <PackageReference Include="MonoGame.Framework.WindowsUniversal">
-      <Version>3.8.0.1641</Version>
+      <Version>3.8.1.263</Version>
     </PackageReference>
     <PackageReference Include="YamlDotNet">
       <Version>9.1.4</Version>
