@@ -1,5 +1,5 @@
 # Drone Project
-Class project (2021)
+Class project (2021) : a drone surveillance software with real time cameras, photos, videos and more !
 
 ![](https://img.shields.io/github/issues/ZukiLTU/Portique_Project)
 ![](https://img.shields.io/github/forks/ZukiLTU/Portique_Project)
@@ -35,3 +35,4 @@ SOON
 
 ## SCREENSHOTS
 ![](http://image.noelshack.com/fichiers/2022/32/2/1659997927-zones-vol.jpg)
+![](https://cdn.discordapp.com/attachments/799206455261659138/852440091002929192/pdv.png)
