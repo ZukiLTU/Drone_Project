@@ -16,8 +16,7 @@ This application is meant to be used with Mavic Air drone, there will be incompa
 
 ## Installation
 ```
-git clone https://github.com/ZukiLTU/Drone_Project && cd Drone_Project/
-
+SOON
 ```
 ### List of materials needed :
 <ul>
@@ -33,3 +32,6 @@ git clone https://github.com/ZukiLTU/Drone_Project && cd Drone_Project/
 **For video display :**
 - Connect the drone using WIFI in your computer
 - Turn on and plug the drone's controller with USB
+
+## SCREENSHOTS
+![](https://prnt.sc/WQbYocOk--ZB)
