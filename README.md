@@ -34,4 +34,4 @@ SOON
 - Turn on and plug the drone's controller with USB
 
 ## SCREENSHOTS
-![](https://prnt.sc/WQbYocOk--ZB)
+![](http://image.noelshack.com/fichiers/2022/32/2/1659997927-zones-vol.jpg)
