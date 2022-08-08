@@ -14,7 +14,7 @@ This application is meant to be used with Mavic Air drone, there will be incompa
 <br/>Also, DO NOT use non-Mavic drones, it won't work at all.
 </div>
 
-##Installation
+## Installation
 ```
 git clone https://github.com/ZukiLTU/Drone_Project && cd Drone_Project/
 
