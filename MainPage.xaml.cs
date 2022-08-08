@@ -7,26 +7,16 @@
   ██    ▄██▀██  ██   ██   ██    ▄██▀ ██     ██▄   ▄██ ██    ██  ██▄    ▄
 ▄████████▀  █████  ▄████▄████████▀ ▄████▄    ▀█████▀▄████  ████▄ ▀█████▀     
 
+Fait par JANUSAUSKAS Tadas, AITOURAB Mehdi et Massengo Riche Hardy en classe de BTS SN2.
 
-MAIN FILE
+Ce fichier est le fichier principal d'exécution du projet.
  */
 
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
 using DJI.WindowsSDK;
-using System.ServiceModel.Channels;
 using Windows.UI.Popups;
 
 namespace DJIDrone
@@ -53,18 +43,18 @@ namespace DJIDrone
         /// <summary>
         /// Liste de menus.
         /// </summary>
-        private List<SDKModuleSampleItems> navigationModules = new List<SDKModuleSampleItems>
+        private readonly List<SDKModuleSampleItems> navigationModules = new List<SDKModuleSampleItems>
         {
             new SDKModuleSampleItems() {
                 header = "DJIDrone", items = new List<KeyValuePair<String, Type>>()
                 {
-                    new KeyValuePair<string, Type>("Activation de DJIDrone", typeof(DJISDKInitializing.ActivatingPage)),
+                    new KeyValuePair<string, Type>("Activation de DJIDrone", typeof(DJISDKInitializing.PageActivation)),
                 },
             },
             new SDKModuleSampleItems() {
                 header = "Vidéo", items = new List<KeyValuePair<String, Type>>()
                 {
-                    new KeyValuePair<string, Type>("Vidéo du drone", typeof(FPV.PageVideoDrone)),
+                    new KeyValuePair<string, Type>("Vidéo du drone", typeof(VideoDrone.PageVideo)),
                 },
             },
             new SDKModuleSampleItems() {
@@ -92,6 +82,13 @@ namespace DJIDrone
                     new KeyValuePair<string, Type>("Zones de vol", typeof(Vol.PageVol)),
                 },
             },
+            new SDKModuleSampleItems() {
+                header = "Lecture", items = new List<KeyValuePair<String, Type>>()
+                {
+                    new KeyValuePair<string, Type>("Lecture du drone", typeof(Playback.PlaybackPage)),
+                },
+            },
+
         };
 
         /// <summary>
@@ -123,7 +120,7 @@ namespace DJIDrone
             DJISDKManager.Instance.SDKRegistrationStateChanged += Instance_SDKRegistrationEvent;
         }
         /// <summary>
-        /// Active la navigation si il n'y a pas d'erreur d'enregistrement du compte.
+        /// Active la navigation s'il n'y a pas d'erreur d'enregistrement du compte.
         /// </summary>
         /// <param name="state"></param>
         /// <param name="resultCode"></param>

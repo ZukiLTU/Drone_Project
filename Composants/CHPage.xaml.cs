@@ -12,7 +12,7 @@ namespace DJIDrone.ComponentHandling
     /// </summary>
     public sealed partial class CHPage : Page
     {
-        private FlightControllerHandler controllerHandler;
+        private readonly FlightControllerHandler controllerHandler;
         public CHPage()
         {
             this.InitializeComponent();
@@ -24,13 +24,12 @@ namespace DJIDrone.ComponentHandling
             try{
                 if(controllerHandler != null) 
                 {
-                    controllerHandler.StartTakeoffAsync();
+                    await controllerHandler.StartTakeoffAsync();
                 }
             }
             catch(Exception ex)
             {
-                MessageDialog message = new MessageDialog("Erreur : "+ ex.ToString());
-                //await message.ShowAsync();
+                await new MessageDialog("Erreur : " + ex.ToString()).ShowAsync();
             }
         }
 
@@ -45,7 +44,7 @@ namespace DJIDrone.ComponentHandling
             }
             catch (Exception ex)
             {
-
+                _ = new MessageDialog("Erreur : " + ex.ToString()).ShowAsync();
             }
         }
     }

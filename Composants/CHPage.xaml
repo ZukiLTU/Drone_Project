@@ -39,10 +39,24 @@
                     </StackPanel>
 
                     <StackPanel Margin="0,10,0,0" Name="settingSamplesPanel">
-                        <StackPanel Margin="8, 8, 0, 0"/>
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}">Paramètres :</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                          Les interfaces de réglage des composants sont des interfaces attendues par lesquelles vous pouvez régler certaines valeurs de votre drone comme l'ISO de la caméra et le nom de l'avion. Saisissez un nouveau nom pour votre drone dans le bloc de texte ci-dessous et cliquez sur le bouton pour lancer le paramétrage.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox HorizontalAlignment="Left" Width="220" PlaceholderText="Nom de drone" Text="{Binding AircraftSetName ,Mode=TwoWay}"></TextBox>
+                            <Button Margin="0,5,0,0" Command="{Binding SetAircraftName}">Changer</Button>
+                        </StackPanel>
                     </StackPanel>
                     <StackPanel Margin="0,10,0,0" Name="gettingSamplePanel">
-                        <StackPanel Margin="8, 8, 0, 0"/>
+                        <TextBlock FontSize="30" Style="{StaticResource TitleTextBlockStyle}"> Recherche :</TextBlock>
+                        <TextBlock Style="{StaticResource BodyTextBlockStyle}"> 
+                        Les interfaces des composants sont des interfaces attendues par lesquelles vous pourriez obtenir certaines valeurs de votre drone. Obtenez le nom de votre drone que vous venez de définir il y a une minute.
+                        </TextBlock>
+                        <StackPanel Margin="8, 8, 0, 0">
+                            <TextBox Text="{Binding AircraftGetName}" Width="220" HorizontalAlignment="Left" PlaceholderText="Nom du drone" IsEnabled="False"></TextBox>
+                            <Button Command="{Binding GetAircraftName}" Margin="0,5,0,0">Chercher</Button>
+                        </StackPanel>
                     </StackPanel>
 
                     <StackPanel Margin="0,10,0,0" Name="actionSamplesPanel">

@@ -10,8 +10,8 @@
 
   <Identity
     Name="com.djidrone"
-    Publisher="CN=Tadas"
-    Version="1.2.2.0" />
+    Publisher="CN=tadul"
+    Version="1.2.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="281aa02b-22bf-4469-9469-586606d1159a" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
