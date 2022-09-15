@@ -1,10 +1,10 @@
 # Drone Project
-Class project (2021) : a drone surveillance software with real time cameras, photos, videos and more !
+Class project (2021) : a drone surveillance software with real time camera stream, photos, videos and more !
 
-![](https://img.shields.io/github/issues/ZukiLTU/Portique_Project)
-![](https://img.shields.io/github/forks/ZukiLTU/Portique_Project)
-![](https://img.shields.io/github/stars/ZukiLTU/Portique_Project)
-![](https://img.shields.io/github/license/ZukiLTU/Portique_Project)
+![](https://img.shields.io/github/issues/ZukiLTU/Drone_Project)
+![](https://img.shields.io/github/forks/ZukiLTU/Drone_Project)
+![](https://img.shields.io/github/stars/ZukiLTU/Drone_Project)
+![](https://img.shields.io/github/license/ZukiLTU/Drone_Project)
 [![CodeFactor](https://www.codefactor.io/repository/github/zukiltu/drone_project/badge)](https://www.codefactor.io/repository/github/zukiltu/drone_project)
 
 ## Reminder
