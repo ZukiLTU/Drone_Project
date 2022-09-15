@@ -33,6 +33,14 @@ SOON
 - Connect the drone using WIFI in your computer
 - Turn on and plug the drone's controller with USB
 
+## Features
+<ul>
+    <li>Video recording, photo capture and real-time camera stream.</li>
+    <li>Drone information such as velocity, speed, height ...</li>
+    <li>Flight areas : shows where the drone can't fly, restricted areas and allowed areas</li>
+    <li>Waypoints : follows 4 coordinate points which is the drone travel path</li>
+    <li>Login using a config file</li>
+</ul>
 ## SCREENSHOTS
 ![](http://image.noelshack.com/fichiers/2022/32/2/1659997927-zones-vol.jpg)
 ![](https://cdn.discordapp.com/attachments/799206455261659138/852440091002929192/pdv.png)
